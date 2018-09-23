@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Comtroller.ModifyProductController">
+   <children>
+      <Label layoutX="24.0" layoutY="24.0" text="Modify Product">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="211.0" text="ID" />
+      <Label layoutX="55.0" layoutY="256.0" text="Name" />
+      <Label layoutX="55.0" layoutY="304.0" text="Invoice" />
+      <Label layoutX="55.0" layoutY="348.0" text="Price" />
+      <Label layoutX="55.0" layoutY="413.0" text="Max" />
+      <Label layoutX="204.0" layoutY="413.0" text="Min" />
+      <Button layoutX="523.0" layoutY="60.0" mnemonicParsing="false" onAction="#Mod_Prod_Search" text="Search" />
+      <TextField layoutX="643.0" layoutY="60.0" />
+      <TableView fx:id="Mod_Prod_TabV_Add" layoutX="390.0" layoutY="119.0" prefHeight="186.0" prefWidth="533.0">
+         <columns>
+            <TableColumn fx:id="Mod_Prod_Add_Pid_COL" prefWidth="127.0" text="Part ID" />
+            <TableColumn fx:id="Mod_Prod_Add_PNME_COL" prefWidth="127.0" text="Part Name" />
+            <TableColumn fx:id="Mod_Prod_Add_InvLVL_COL" prefWidth="136.0" text="Inventory Level" />
+            <TableColumn fx:id="Mod_Prod_Add_PPU_COL" prefWidth="142.0" text="Price Per Unit" />
+         </columns>
+      </TableView>
+      <TableView fx:id="Mod_Prod_TabV_Delete" layoutX="390.0" layoutY="369.0" prefHeight="186.0" prefWidth="533.0">
+         <columns>
+            <TableColumn fx:id="Mod_Prod_Del_Pid_COL" prefWidth="127.0" text="Part ID" />
+            <TableColumn fx:id="Mod_Prod_Del_PNME_COL" prefWidth="127.0" text="Part Name" />
+            <TableColumn fx:id="Mod_Prod_Del_InvLVL_COL" prefWidth="136.0" text="Inventory Level" />
+            <TableColumn fx:id="Mod_Prod_Del_PPU_COL" prefWidth="142.0" text="Price Per Unit" />
+         </columns>
+      </TableView>
+      <Button layoutX="837.0" layoutY="319.0" mnemonicParsing="false" onAction="#Mod_Prod_Add" text="Add" />
+      <Button defaultButton="true" layoutX="837.0" layoutY="569.0" mnemonicParsing="false" onAction="#Mod_Prod_Delete" text="Delete" />
+      <Button cancelButton="true" layoutX="837.0" layoutY="622.0" mnemonicParsing="false" onAction="#Mod_Prod_Cancel" text="Cancel" />
+      <TextField layoutX="146.0" layoutY="206.0" />
+      <TextField fx:id="txtNameModProd" layoutX="146.0" layoutY="251.0" promptText="Product Name" />
+      <TextField fx:id="txtInvoiceModProd" layoutX="146.0" layoutY="299.0" promptText="Invoice" />
+      <TextField fx:id="txtPriceModProd" layoutX="146.0" layoutY="343.0" promptText="Price" />
+      <TextField fx:id="txtMaxModProd" layoutX="110.0" layoutY="408.0" prefHeight="31.0" prefWidth="72.0" promptText="Max" />
+      <TextField fx:id="txtMinModProd" layoutX="261.0" layoutY="408.0" prefHeight="31.0" prefWidth="72.0" promptText="Min" />
+      <Button layoutX="737.0" layoutY="622.0" mnemonicParsing="false" onAction="#Mod_Prod_Save" text="Save" />
+   </children>
+</AnchorPane>
